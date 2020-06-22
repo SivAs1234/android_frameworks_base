@@ -4547,6 +4547,16 @@ public final class Settings {
         public static final String RINGTONE_VIBRATION_PATTERN = "ringtone_vibration_pattern";
 
         /**
+         * Whether to vibrate on call state change
+         * @hide
+         */
+        public static final String INCALL_FEEDBACK_VIBRATE = "incall_feeedback_vibrate";
+
+        /** @hide */
+        public static final Validator INCALL_FEEDBACK_VIBRATE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4732,6 +4742,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(SCREENSHOT_SHUTTER_SOUND);
+            PRIVATE_SETTINGS.add(INCALL_FEEDBACK_VIBRATE);
         }
 
         /**
@@ -4829,6 +4840,7 @@ public final class Settings {
                     ACCELEROMETER_ROTATION_ANGLES_VALIDATOR);
             VALIDATORS.put(SCREENSHOT_SHUTTER_SOUND,
                     SCREENSHOT_SHUTTER_SOUND_VALIDATOR);
+            VALIDATORS.put(INCALL_FEEDBACK_VIBRATE, INCALL_FEEDBACK_VIBRATE_VALIDATOR);
         }
 
         /**
